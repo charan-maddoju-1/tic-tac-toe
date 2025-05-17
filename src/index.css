@@ -1,0 +1,145 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.body-container {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(135deg,#9603ff,#6105ff,#2605ff,#052afa,#0584fa,#05d1fa);
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 20px;
+}
+
+@media(min-width:798px){
+    .game-container{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .board-container{
+      width:50%;
+      display:flex;
+      flex-direction: row;
+      justify-content: right;
+    }
+    .board {
+      width:60%;
+
+    }
+    .list-container{
+        padding:10px;
+        width:50%;
+        text-align: left;
+    }
+    .move-button{
+        margin-left:30px;
+    }
+}
+
+.board-container{
+  width:100%;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin:20px;
+}
+
+.player-status {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.winner{
+  animation: pop 0.4s ease-in-out;
+  font-weight: 500;
+  color:green;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1px;
+  cursor: pointer;
+  /* border: 1px solid #333; */
+  border:0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.win {
+  animation: pop 0.4s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.list-container{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media(max-width:798px){
+  .list-item{
+    text-align: center;
+  }
+}
+
+.list-item{
+ list-style-type: none;
+ width:100%;
+}
+
+.move-button{
+    width:50%;
+    border-radius: 10px;
+    border-width: 0;
+    font-family: sans-serif;
+    font-weight:200;
+    font-size: 10px;
+    color:#17203f;
+    padding:5px;
+    background-color: rgb(226, 248, 240);
+}
+
+
+
