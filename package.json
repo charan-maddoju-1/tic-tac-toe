@@ -1,4 +1,6 @@
 {
+  "homepage": "https://github.com/charan-maddoju-1/tic-tac-toe",
+
   "name": "react.dev",
   "version": "0.0.0",
   "main": "/src/index.js",
@@ -6,10 +8,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "^5.0.0"
