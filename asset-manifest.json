@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/charan-maddoju-1/tic-tac-toe/static/css/main.be329d11.css",
+    "main.js": "/charan-maddoju-1/tic-tac-toe/static/js/main.b672f3bf.js",
+    "index.html": "/charan-maddoju-1/tic-tac-toe/index.html",
+    "main.be329d11.css.map": "/charan-maddoju-1/tic-tac-toe/static/css/main.be329d11.css.map",
+    "main.b672f3bf.js.map": "/charan-maddoju-1/tic-tac-toe/static/js/main.b672f3bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be329d11.css",
+    "static/js/main.b672f3bf.js"
+  ]
+}
