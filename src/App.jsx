@@ -167,11 +167,11 @@ function Square({ value, squareClick, bgColor, extraClass }) {
   );
 }
 
-function BoardElements({ squares, handleClick, status, newColor, winPath,extraClass }) {
+function BoardElements({ squares, handleClick, status, newColor, winPath,statusClass,boardClass}) {
   return (
-    <div className="board">
+    <div className={`board ${boardClass}`}>
       <div>
-        <p className={`player-status ${extraClass}`}>{status}</p>
+        <p className={`player-status ${statusClass}`}>{status}</p>
       </div>
       {[0, 3, 6].map((rowStart) => (
         <div key={rowStart} className="board-row">
@@ -193,7 +193,7 @@ function BoardElements({ squares, handleClick, status, newColor, winPath,extraCl
   );
 }
 
-function Board({ squares, nextX, onPlay, backColors }) {
+function Board({ squares, nextX, onPlay, backColors, currentMove}) {
   function handleClick(i) {
     if (findWinner(squares) || squares[i]) {
       return;
@@ -207,15 +207,21 @@ function Board({ squares, nextX, onPlay, backColors }) {
   const win = findWinner(squares);
   let winPath = [];
   let status;
+  let boardClass="";
 
-  if (!win) {
+  if (!win&&currentMove<9) {
     status = `Next Player : ${nextX ? "X" : "O"}`;
-  } else {
+  } 
+  else if(win!==null) {
     status = "Winner : " + win.winner;
     winPath = win.winnerPath;
     for (let i = 0; i < winPath.length; i++) {
       newColors[winPath[i]] = "#03ff4a";
     }
+  }
+  else{
+    status = "It's a draw";
+    boardClass="board-draw"
   }
 
   return (
@@ -226,7 +232,8 @@ function Board({ squares, nextX, onPlay, backColors }) {
         handleClick={handleClick}
         newColor={newColors}
         winPath={winPath}
-        extraClass={win?"winner":""}
+        boardClass={boardClass}
+        statusClass={win?"winner":currentMove<9?"":"draw"}
       />
     </div>
     
@@ -278,7 +285,7 @@ export default function App() {
     <div className="body-container">
       <h1 className="header">TIC TAC TOE</h1>
       <div className="game-container">
-        <Board squares={currentSquares} nextX={nextX} onPlay={handlePlay} backColors={backColors} />
+        <Board squares={currentSquares} nextX={nextX} onPlay={handlePlay} backColors={backColors} currentMove={currentMove} />
         <ul className="list-container">{moves}</ul>
         
         
