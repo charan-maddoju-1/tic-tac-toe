@@ -1,15 +1,25 @@
-🕹️ Tic Tac Toe Game
-A simple and fun implementation of the classic Tic Tac Toe game! Play against a friend.
+# 🕹️ Tic Tac Toe
 
-📌 Features
-Two-player mode:
-Clear and interactive UI
-Win/draw detection
-Restart option
+A simple implementation of the classic Tic Tac Toe game. Play with a friend or against the computer, and enjoy this timeless game of strategy and fun!
 
-🛠️ Technologies Used:
-Programming Language:JavaScript
-Interface: Web (HTML/CSS/JS)
-FrameWork : React.JS
+---
+
+## 📌 Features
+
+- Two-player mode
+- Clean and intuitive interface
+- Win and draw detection
+- Game reset functionality
+- Time Travel feature
+
+---
+
+## 🚀 Tools used
+
+- **Progarmming language**: Java Script
+- **Framework**: React.JS
+- **Interface**: Web(HTML/CSS/JS)
+
+
 
 
