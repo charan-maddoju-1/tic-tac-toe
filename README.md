@@ -16,7 +16,7 @@ A simple implementation of the classic Tic Tac Toe game. Play with a friend or a
 
 ## 🚀 Tools used
 
-- **Progarmming language**: Java Script
+- **Programming language**: Java Script
 - **Framework**: React.JS
 - **Interface**: Web(HTML/CSS/JS)
 
